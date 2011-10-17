@@ -1,7 +1,7 @@
 window.onload = function() {
   var canvas = document.getElementById('canvas-touch1');
   make_circle(canvas, "red");
-  //move(canvas);
+  move(canvas);
 }
 
 function make_circle(canvas, color) {

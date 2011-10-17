@@ -1,3 +1,18 @@
+window.onload = function() {
+  var canvas = document.getElementById('canvas-touch1');
+  //make_circle(canvas, "red");
+  move(canvas);
+}
+
+function make_circle(canvas, color) {
+  var ctx = canvas.getContext('2d');
+  ctx.beginPath();
+  ctx.arc(100,100,25,0,2*Math.PI, false);
+  ctx.fillStyle = color;
+  ctx.fill();
+  ctx.stroke();
+}
+
 function move(obj) {
   obj.addEventListener('touchmove', function(event) {
     // If there's exactly one finger inside this element
@@ -10,14 +25,6 @@ function move(obj) {
   }, false);
 }
 
-function make_circle(canvas, color) {
-  var ctx = canvas.getContext('2d');
-  ctx.beginPath();
-  ctx.arc(100,100,25,0,2*Math.PI, false);
-  ctx.fillStyle = color;
-  ctx.fill();
-}
-
 function new_circle() {
   var canvas = document.createElement('canvas');
   canvas.style.position = 'relative';
@@ -28,9 +35,4 @@ function new_circle() {
   move(canvas);
 }
 
-window.onload = function() {
-  var obj1= document.getElementById('canvas-touch1');
-  make_circle(obj1, "red");
-  move(obj1);
-}
 

@@ -27,10 +27,10 @@ function move(obj) {
 
 function new_circle() {
   var canvas = document.createElement('canvas');
+  canvas.width="70";
+  canvas.height="70";
   canvas.style.position = 'relative';
-  canvas.width="50";
-  canvas.height="50";
-  document.body.appendChild(canvas);
+  document.getElementById("circles").appendChild(canvas);
   make_circle(canvas, "green");
   move(canvas);
 }

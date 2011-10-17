@@ -35,4 +35,7 @@ function new_circle() {
   move(canvas);
 }
 
-
+// Prevent scrolling
+document.body.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+}, false); 

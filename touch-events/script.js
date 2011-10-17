@@ -28,8 +28,8 @@ function move(obj) {
 function new_circle() {
   var canvas = document.createElement('canvas');
   canvas.style.position = 'relative';
-  canvas.width="50px";
-  canvas.height="50px";
+  canvas.width="50";
+  canvas.height="50";
   document.body.appendChild(canvas);
   make_circle(canvas, "green");
   move(canvas);

@@ -26,14 +26,12 @@ function move(obj) {
 }
 
 function new_circle() {
-  var colorArray = ["red", "blue", "green", "yellow"];
-  var color= colorArray[Math.floor(Math.random() * colorArry.length)];
   var canvas = document.createElement('canvas');
   canvas.style.position = 'relative';
   canvas.width="50";
   canvas.height="50";
   document.body.appendChild(canvas);
-  make_circle(canvas, color);
+  make_circle(canvas, "green");
   move(canvas);
 }
 

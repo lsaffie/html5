@@ -1,13 +1,13 @@
 window.onload = function() {
   var canvas = document.getElementById('canvas-touch1');
-  //make_circle(canvas, "red");
-  move(canvas);
+  make_circle(canvas, "red");
+  //move(canvas);
 }
 
 function make_circle(canvas, color) {
   var ctx = canvas.getContext('2d');
   ctx.beginPath();
-  ctx.arc(100,100,25,0,2*Math.PI, false);
+  ctx.arc(18,18,15,0,2*Math.PI, false);
   ctx.fillStyle = color;
   ctx.fill();
   ctx.stroke();

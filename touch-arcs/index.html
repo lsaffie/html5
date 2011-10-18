@@ -10,12 +10,12 @@ canvas { border: 1px solid black; }
 <script type="text/javascript">
 
   var yDiff = 70
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext('2d');
 
   function init(){
-    var canvas = document.getElementById("canvas");
     canvas.addEventListener('touchstart', function(event) {
         var touch = event.targetTouches[0];
-        var ctx = canvas.getContext('2d');
         ctx.beginPath();
         ctx.arc(touch.pageX,touch.pageY-yDiff,15,0,2*Math.PI, false);
         ctx.fillStyle = "red";
@@ -25,8 +25,6 @@ canvas { border: 1px solid black; }
   }
 
   function clearCanvas(){
-    var canvas = document.getElementById('canvas');
-    var ctx = canvas.getContext('2d');
     ctx.clearRect(0,0,canvas.width, canvas.height);
   }
 

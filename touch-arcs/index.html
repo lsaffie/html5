@@ -24,12 +24,20 @@ canvas { border: 1px solid black; }
         }, false);
   }
 
+  function clear(){
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+  }
+
 </script>
 </head>
 <body onload="init()">
   <h1>Touch to make an arc</h1>
 
 <canvas id="canvas" width="300" height="300" style="top:0px; left:0px; width: 300px; height: 300px;"></canvas>
+
+<button onclick="clear();"> Clear </button>
 
 </body>
 </html>

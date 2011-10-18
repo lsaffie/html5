@@ -1,4 +1,4 @@
-window.onload = function() {
+function init() {
   var obj1 = document.getElementById('canvas-touch1');
   var obj2 = document.getElementById('canvas-touch2');
   var obj3 = document.getElementById('canvas-touch3');

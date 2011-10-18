@@ -15,12 +15,10 @@ canvas { border: 1px solid black; }
         var touch = event.targetTouches[0];
         var ctx = canvas.getContext('2d');
         ctx.beginPath();
-        ctx.arc(touch.pageX-40,touch.pageY-40,15,0,2*Math.PI, false);
+        ctx.arc(touch.pageX,touch.pageY-20,15,0,2*Math.PI, false);
         ctx.fillStyle = "red";
         ctx.fill();
         ctx.stroke();
-        ctx.closePath();
-        ctx.restore();
         }, false);
   }
 

@@ -4,15 +4,29 @@ window.onload = function() {
   //obj.style.background = "red";
   //obj.style.position = 'relative';
   //  move(canvas);
-  obj.addEventListener('touchmove', function(event) {
-    // If there's exactly one finger inside this element
+  obj.addEventListener('touchstart', function(event) {
     if (event.targetTouches.length == 1) {
       var touch = event.targetTouches[0];
-      // Place element where the finger is
-      obj.style.left = touch.pageX + 'px';
-      obj.style.top = touch.pageY + 'px';
-    }
-  }, false);
+      var px = touch.pageX;
+      var py = touch.pageY;
+      ctx.beginPath();
+      ctx.arc(px, py, 20,0, 2*Math.PI, true);
+      ctx.fillStyle = "rgba(0, 0, 200, 0.2)";
+      ctx.fill();
+      ctx.lineWidth = 2.0;
+      ctx.strokeStyle = "rgba(0, 0, 200, 0.8)";
+      ctx.stroke();
+  });
+
+  //obj.addEventListener('touchmove', function(event) {
+  //  // If there's exactly one finger inside this element
+  //  if (event.targetTouches.length == 1) {
+  //    var touch = event.targetTouches[0];
+  //    // Place element where the finger is
+  //    obj.style.left = touch.pageX + 'px';
+  //    obj.style.top = touch.pageY + 'px';
+  //  }
+  //}, false);
   //var canvas = document.getElementById('canvas-touch1');
   //canvas.width = "300";
   //canvas.height = "300";

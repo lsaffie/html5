@@ -9,13 +9,15 @@ canvas { border: 1px solid black; }
 </style>
 <script type="text/javascript">
 
+  var yDiff = 70
+
   function init(){
     var canvas = document.getElementById("canvas");
     canvas.addEventListener('touchstart', function(event) {
         var touch = event.targetTouches[0];
         var ctx = canvas.getContext('2d');
         ctx.beginPath();
-        ctx.arc(touch.pageX,touch.pageY-70,15,0,2*Math.PI, false);
+        ctx.arc(touch.pageX,touch.pageY-yDiff,15,0,2*Math.PI, false);
         ctx.fillStyle = "red";
         ctx.fill();
         ctx.stroke();

@@ -26,8 +26,7 @@ canvas { border: 1px solid black; }
 
   function clear(){
     var canvas = document.getElementById('canvas');
-    var ctx = canvas.getContext('2d');
-    ctx.clearRect(300,300,canvas.width,canvas.height);
+    canvas.width = canvas.width;
   }
 
 </script>

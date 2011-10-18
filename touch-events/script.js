@@ -1,7 +1,7 @@
 window.onload = function() {
   var obj1 = document.getElementById('canvas-touch1');
-  var obj2 = document.getElementById('canvas-touch1');
-  var obj3 = document.getElementById('canvas-touch1');
+  var obj2 = document.getElementById('canvas-touch2');
+  var obj3 = document.getElementById('canvas-touch3');
   make_arc(obj1, "red");
   move(obj1);
   make_arc(obj2, "red");

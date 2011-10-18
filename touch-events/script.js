@@ -17,12 +17,13 @@ window.onload = function() {
 }
 
 function make_circle(canvas, color) {
-  var ctx = canvas.getContext('2d');
-  ctx.beginPath();
-  ctx.arc(18,18,15,0,2*Math.PI, false);
-  ctx.fillStyle = color;
-  ctx.fill();
-  ctx.stroke();
+  //var ctx = canvas.getContext('2d');
+  //ctx.beginPath();
+  //ctx.arc(18,18,15,0,2*Math.PI, false);
+  //ctx.fillStyle = color;
+  //ctx.fill();
+  //ctx.stroke();
+  canvas.style.background = color;
 }
 
 function move(obj) {

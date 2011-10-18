@@ -37,7 +37,7 @@ function new_circle() {
   ctx.beginPath();
   ctx.arc(18,18,15,0,2*Math.PI, false);
   ctx.closePath();
-  ctx.fillStyle = color;
+  ctx.fillStyle = "green";
   ctx.fill();
   ctx.stroke();
 

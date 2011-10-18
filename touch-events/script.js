@@ -9,8 +9,8 @@ window.onload = function() {
     if (event.targetTouches.length == 1) {
       var touch = event.targetTouches[0];
       // Place element where the finger is
-      obj.style.left = touch.pageX + 'px' - "50px";
-      obj.style.top = touch.pageY + 'px' - "50px";
+      obj.style.left = touch.pageX + 'px';
+      obj.style.top = touch.pageY + 'px';
     }
   }, false);
   //var canvas = document.getElementById('canvas-touch1');

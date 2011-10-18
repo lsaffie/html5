@@ -13,13 +13,14 @@ canvas { border: 1px solid black; }
     var canvas = document.getElementById("canvas");
     canvas.addEventListener('touchstart', function(event) {
         alert(event.touches.length);
-        <!--var touch = event.targetTouches[0];-->
-        <!--var ctx = canvas.getContext('2d');-->
-        <!--ctx.beginPath();-->
-        <!--ctx.arc(touch.pageX,touch.pageY,15,0,2*Math.PI, false);-->
-        <!--ctx.fillStyle = color;-->
-        <!--ctx.fill();-->
-        <!--ctx.stroke();-->
+        var touch = event.targetTouches[0];
+        alert(touch.pageX);
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.arc(touch.pageX,touch.pageY,15,0,2*Math.PI, false);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.stroke();
         }, false);
   }
 

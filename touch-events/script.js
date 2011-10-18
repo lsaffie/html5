@@ -3,7 +3,6 @@ window.onload = function() {
   //make_circle(canvas, "red");
   //move(canvas);
   var canvas = document.getElementById('canvas-touch1');
-  canvas.style.background = "red";
   canvas.width = "300";
   canvas.height = "300";
   canvas.addEventListener('touchmove', function(event) {

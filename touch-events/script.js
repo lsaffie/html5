@@ -1,7 +1,7 @@
 window.onload = function() {
   var obj = document.getElementById('canvas-touch1');
   //make_circle(obj, "red");
-  obj.style.background = color;
+  obj.style.background = "red";
   obj.style.position = 'relative';
   //  move(canvas);
   obj.addEventListener('touchmove', function(event) {

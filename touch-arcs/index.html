@@ -27,7 +27,10 @@ canvas { border: 1px solid black; }
   function clearCanvas(){
     alert("in clear");
     var canvas = document.getElementById('canvas');
-    canvas.width = canvas.width;
+    clearRect(0,0,canvas.width, canvas.height);
+    alert(canvas);
+    alert(canvas.width);
+    alert(canvas.height);
   }
 
 </script>

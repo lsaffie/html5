@@ -30,8 +30,18 @@ function new_circle() {
   canvas.width="70";
   canvas.height="70";
   canvas.style.position = 'relative';
+  //document.getElementById("circles").appendChild(canvas);
+  //make_circle(canvas, "green");
+  
+  var ctx = canvas.getContext('2d');
+  ctx.beginPath();
+  ctx.arc(18,18,15,0,2*Math.PI, false);
+  ctx.fillStyle = color;
+  ctx.fill();
+  ctx.stroke();
+
   document.getElementById("circles").appendChild(canvas);
-  make_circle(canvas, "green");
+
   move(canvas);
 }
 

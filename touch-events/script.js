@@ -1,19 +1,19 @@
 window.onload = function() {
-  //var canvas = document.getElementById('canvas-touch1');
-  //make_circle(canvas, "red");
-  //move(canvas);
   var canvas = document.getElementById('canvas-touch1');
-  canvas.width = "300";
-  canvas.height = "300";
-  canvas.addEventListener('touchmove', function(event) {
-    for (var i=0; i< event.touches.length; i++) {
-      var touch = event.touches[i];
-      ctx.beginPath();
-      ctx.arc(touch.pageX, touch.pageY, 20, 0, 2*Math.PI, true);
-      ctx.fill();
-      ctx.stroke();
-    }
-  },false);
+  make_circle(canvas, "red");
+  move(canvas);
+  //var canvas = document.getElementById('canvas-touch1');
+  //canvas.width = "300";
+  //canvas.height = "300";
+  //canvas.addEventListener('touchmove', function(event) {
+  //  for (var i=0; i< event.touches.length; i++) {
+  //    var touch = event.touches[i];
+  //    ctx.beginPath();
+  //    ctx.arc(touch.pageX, touch.pageY, 20, 0, 2*Math.PI, true);
+  //    ctx.fill();
+  //    ctx.stroke();
+  //  }
+  //},false);
 }
 
 function make_circle(canvas, color) {

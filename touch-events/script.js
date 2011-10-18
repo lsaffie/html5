@@ -31,10 +31,8 @@ function move(obj) {
     if (event.targetTouches.length == 1) {
       var touch = event.targetTouches[0];
       // Place element where the finger is
-      //obj.style.left = touch.pageX + 'px';
-      //obj.style.top = touch.pageY + 'px';
-      obj.style.left = touch.pageX;
-      obj.style.top = touch.pageY;
+      obj.style.left = touch.pageX + 'px';
+      obj.style.top = touch.pageY + 'px';
     }
   }, false);
 }

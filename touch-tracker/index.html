@@ -12,7 +12,8 @@ canvas { border: 1px solid black; }
   function init(){
     var canvas = document.getElementById("canvas");
     canvas.addEventListener('touchmove', function(event) {
-        var touch = event.touches[0];
+        var touch = event.targetTouches[0];
+        var ctx = canvas.getContext('2d');
         ctx.beginPath();
         ctx.arc(touch.pageX,touch.pageY,15,0,2*Math.PI, false);
         ctx.fillStyle = color;

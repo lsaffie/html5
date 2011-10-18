@@ -3,11 +3,8 @@ window.onload = function() {
   var obj2 = document.getElementById('canvas-touch2');
   var obj3 = document.getElementById('canvas-touch3');
   make_arc(obj1, "red");
-  move(obj1);
   make_arc(obj2, "red");
-  move(obj2);
   make_arc(obj3, "red");
-  move(obj3);
 }
 
 function make_arc(canvas, color) {
@@ -17,6 +14,7 @@ function make_arc(canvas, color) {
   ctx.fillStyle = color;
   ctx.fill();
   ctx.stroke();
+  move(canvas);
 }
 
 function move(obj) {

@@ -29,23 +29,15 @@ function move(obj) {
 
 function new_circle() {
   var canvas = document.createElement('canvas');
+  var id = "canvas-" + Math.floor(Math.random()*11);
+  canvas.id = id;
   canvas.width="70";
   canvas.height="70";
+  canvas.style.background = "green";
   canvas.style.position = 'relative';
-  //document.getElementById("circles").appendChild(canvas);
-  //make_circle(canvas, "green");
-
-  var ctx = canvas.getContext('2d');
-  ctx.beginPath();
-  ctx.arc(18,18,15,0,2*Math.PI, false);
-  ctx.closePath();
-  ctx.fillStyle = "green";
-  ctx.fill();
-  ctx.stroke();
-
   document.getElementById("circles").appendChild(canvas);
-
-  move(canvas);
+  obj = document.getElementById(id);
+  move(obj);
 }
 
 // Prevent scrolling

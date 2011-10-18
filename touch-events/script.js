@@ -1,10 +1,13 @@
 window.onload = function() {
-  var obj = document.getElementById('canvas-touch1');
-  obj.width = 70;
-  obj.height = 70;
-  obj.style.position = 'relative';
-  make_arc(obj, "red");
-  move(obj);
+  var obj1 = document.getElementById('canvas-touch1');
+  var obj2 = document.getElementById('canvas-touch1');
+  var obj3 = document.getElementById('canvas-touch1');
+  make_arc(obj1, "red");
+  move(obj1);
+  make_arc(obj2, "red");
+  move(obj2);
+  make_arc(obj3, "red");
+  move(obj3);
 }
 
 function make_arc(canvas, color) {

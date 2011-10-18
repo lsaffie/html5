@@ -36,6 +36,7 @@ function new_circle() {
   var ctx = canvas.getContext('2d');
   ctx.beginPath();
   ctx.arc(18,18,15,0,2*Math.PI, false);
+  ctx.closePath();
   ctx.fillStyle = color;
   ctx.fill();
   ctx.stroke();

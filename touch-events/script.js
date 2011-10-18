@@ -24,6 +24,7 @@ function make_circle(canvas, color) {
   //ctx.fill();
   //ctx.stroke();
   canvas.style.background = color;
+  canvas.style.position = 'relative';
 }
 
 function move(obj) {

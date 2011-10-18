@@ -13,7 +13,11 @@ canvas { border: 1px solid black; }
     var canvas = document.getElementById("canvas");
     canvas.addEventListener('touchmove', function(event) {
         var touch = event.touches[0];
-        renderTouch(canvas, touch);
+        ctx.beginPath();
+        ctx.arc(touch.pageX,touch.pageY,15,0,2*Math.PI, false);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.stroke();
         }, false);
   }
 

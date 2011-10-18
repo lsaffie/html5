@@ -18,7 +18,7 @@ canvas { border: 1px solid black; }
         var ctx = this.getContext('2d');
         ctx.beginPath();
         ctx.arc(touch.pageX,touch.pageY,15,0,2*Math.PI, false);
-        ctx.fillStyle = color;
+        ctx.fillStyle = "red";
         ctx.fill();
         ctx.stroke();
         }, false);

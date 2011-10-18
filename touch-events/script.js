@@ -1,7 +1,7 @@
 window.onload = function() {
   var obj = document.getElementById('canvas-touch1');
   make_circle(obj, "red");
-  //move(canvas);
+  move(obj);
 }
 
 function make_circle(canvas, color) {
@@ -13,7 +13,6 @@ function make_circle(canvas, color) {
   //ctx.stroke();
   canvas.style.background = color;
   canvas.style.position = 'relative';
-  move(canvas);
 }
 
 function move(obj) {

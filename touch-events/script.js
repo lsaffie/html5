@@ -1,10 +1,10 @@
 window.onload = function() {
   var obj = document.getElementById('canvas-touch1');
-  make_circle(obj, "red");
+  make_arc(obj, "red");
   move(obj);
 }
 
-function make_circle(canvas, color) {
+function make_arc(canvas, color) {
   //var ctx = canvas.getContext('2d');
   //ctx.beginPath();
   //ctx.arc(18,18,15,0,2*Math.PI, false);
@@ -12,7 +12,6 @@ function make_circle(canvas, color) {
   //ctx.fill();
   //ctx.stroke();
   canvas.style.background = color;
-  canvas.style.position = 'relative';
 }
 
 function move(obj) {
@@ -27,17 +26,14 @@ function move(obj) {
   }, false);
 }
 
-function new_circle() {
+function new_canvas() {
   var canvas = document.createElement('canvas');
-  var id = "canvas-" + Math.floor(Math.random()*11);
-  canvas.id = id;
   canvas.width="70";
   canvas.height="70";
-  canvas.style.background = "green";
   canvas.style.position = 'relative';
   document.getElementById("circles").appendChild(canvas);
-  obj = document.getElementById(id);
-  move(obj);
+  make_arc(canvas, "green");
+  move(canvas);
 }
 
 // Prevent scrolling

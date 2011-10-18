@@ -1,7 +1,20 @@
 window.onload = function() {
+  //var canvas = document.getElementById('canvas-touch1');
+  //make_circle(canvas, "red");
+  //move(canvas);
   var canvas = document.getElementById('canvas-touch1');
-  make_circle(canvas, "red");
-  move(canvas);
+  canvas.style.background = "red";
+  canvas.width = "300";
+  canvas.height = "300";
+  canvas.addEventListener('touchmove', function(event) {
+    for (var i=0; i< event.touches.length; i++) {
+      var touch = event.touches[i];
+      ctx.beginPath();
+      ctx.arc(touch.pageX, touch.pageY, 20, 0, 2*Math.PI, true);
+      ctx.fill();
+      ctx.stroke();
+    }
+  },false);
 }
 
 function make_circle(canvas, color) {
@@ -19,8 +32,10 @@ function move(obj) {
     if (event.targetTouches.length == 1) {
       var touch = event.targetTouches[0];
       // Place element where the finger is
-      obj.style.left = touch.pageX + 'px';
-      obj.style.top = touch.pageY + 'px';
+      //obj.style.left = touch.pageX + 'px';
+      //obj.style.top = touch.pageY + 'px';
+      obj.style.left = touch.pageX;
+      obj.style.top = touch.pageY;
     }
   }, false);
 }

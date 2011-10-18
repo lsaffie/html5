@@ -1,6 +1,8 @@
 window.onload = function() {
   var obj = document.getElementById('canvas-touch1');
-  make_circle(obj, "red");
+  //make_circle(obj, "red");
+  canvas.style.background = color;
+  canvas.style.position = 'relative';
   //  move(canvas);
   obj.addEventListener('touchmove', function(event) {
     // If there's exactly one finger inside this element

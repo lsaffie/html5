@@ -1,5 +1,8 @@
 window.onload = function() {
   var obj = document.getElementById('canvas-touch1');
+  obj.width = 70;
+  obj.height = 70;
+  obj.style.position = 'relative';
   make_arc(obj, "red");
   move(obj);
 }
